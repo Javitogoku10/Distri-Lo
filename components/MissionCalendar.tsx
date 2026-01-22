@@ -1,14 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-
-interface ScheduledMission {
-  id: string;
-  date: string; // ISO format YYYY-MM-DD
-  origin: string;
-  destination: string;
-  type: 'Flete' | 'Mudanza';
-  status: 'Confirmado' | 'Espacio Disponible' | 'Solicitado';
-}
+import { ScheduledMission } from '../types';
 
 const MissionCalendar: React.FC = () => {
   const [currentDate, setCurrentDate] = useState(new Date());
